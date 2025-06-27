@@ -1,0 +1,26 @@
+name: v789c_app
+description: Victoria789 VIP WebView App
+version: 1.0.0+1
+publish_to: 'none'
+
+environment:
+  sdk: ">=3.2.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  webview_flutter: ^4.0.7
+  flutter_launcher_icons: ^0.13.1
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/app_icon.png"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/icon/app_foreground.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/image/wall1.png
+    - assets/image/wall2.png
