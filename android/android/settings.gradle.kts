@@ -1,2 +1,2 @@
-rootProject.name = "vip"
+rootProject.name = "vtr789c"
 include(":app")
