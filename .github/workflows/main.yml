@@ -2,11 +2,9 @@ name: Flutter CI
 
 on:
   push:
-    branches:
-      - main # หรือ master ถ้าคุณใช้ branch master
+    branches: [main]
   pull_request:
-    branches:
-      - main # หรือ master ถ้าคุณใช้ branch master
+    branches: [main]
 
 jobs:
   build:
@@ -19,7 +17,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.22.2' # คุณสามารถระบุเวอร์ชัน Flutter ที่ต้องการได้ เช่น '3.19.x' หรือ '3.22.x'
+          flutter-version: '3.22.2'
           channel: 'stable'
 
       - name: Install dependencies
@@ -28,9 +26,8 @@ jobs:
       - name: Build Android APK
         run: flutter build apk --release
 
-      - name: Upload Android APK (optional)
+      - name: Upload Android APK
         uses: actions/upload-artifact@v4
         with:
           name: app-release
           path: build/app/outputs/flutter-apk/app-release.apk
-          
